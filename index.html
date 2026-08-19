@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industria en Chile | Panorama Industrial</title>
+<style>
+:root{
+  --navy:#102a43; --blue:#1769aa; --sky:#eaf4fb; --red:#d83a3a;
+  --gold:#e6a23c; --dark:#17212b; --muted:#607080; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);line-height:1.6;background:#f7f9fb}
+header{
+  min-height:78vh; color:white; display:flex; align-items:center;
+  background:linear-gradient(120deg,rgba(16,42,67,.95),rgba(23,105,170,.78)),
+  url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1800&q=80") center/cover;
+}
+nav{
+  position:fixed;top:0;left:0;width:100%;z-index:10;padding:16px 6%;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(16,42,67,.94);backdrop-filter:blur(8px)
+}
+.logo{font-size:1.35rem;font-weight:800;letter-spacing:.5px}
+.logo span{color:#f4c15d}
+nav a{color:white;text-decoration:none;margin-left:22px;font-size:.95rem}
+nav a:hover{color:#f4c15d}
+.hero{width:min(1100px,88%);margin:auto;padding-top:70px}
+.badge{display:inline-block;background:rgba(255,255,255,.15);padding:8px 14px;border-radius:30px;margin-bottom:18px}
+h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.05;margin-bottom:22px}
+.hero p{max-width:720px;font-size:1.2rem;color:#e7f0f7}
+.btn{
+  display:inline-block;margin-top:28px;background:#f4c15d;color:#17212b;
+  padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:700
+}
+section{padding:80px 6%}
+.container{width:min(1120px,100%);margin:auto}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:2.3rem;color:var(--navy);margin-bottom:10px}
+.section-title p{color:var(--muted);max-width:700px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{
+  background:white;border-radius:14px;padding:28px;box-shadow:0 8px 30px rgba(16,42,67,.08);
+  border-top:4px solid var(--blue);transition:.25s
+}
+.card:hover{transform:translateY(-5px)}
+.icon{font-size:2.3rem;margin-bottom:12px}
+.card h3{color:var(--navy);margin-bottom:8px}
+.card p{color:var(--muted)}
+.stats{background:var(--navy);color:white}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat strong{font-size:2.7rem;display:block;color:#f4c15d}
+.stat span{color:#d9e5ee}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.visual{
+  min-height:370px;border-radius:18px;
+  background:url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80") center/cover;
+}
+.list{list-style:none}
+.list li{padding:13px 0;border-bottom:1px solid #dce4ea}
+.list li::before{content:"✓";color:var(--blue);font-weight:bold;margin-right:10px}
+.timeline{display:grid;gap:18px}
+.timeline article{background:white;padding:22px;border-left:5px solid var(--red);border-radius:8px;box-shadow:0 5px 20px rgba(0,0,0,.05)}
+.timeline b{color:var(--red)}
+.cta{background:linear-gradient(120deg,var(--blue),var(--navy));color:white;text-align:center}
+.cta h2{font-size:2.3rem;margin-bottom:12px}
+footer{background:#0b1d2d;color:#cbd7e0;text-align:center;padding:28px 6%}
+footer small{display:block;margin-top:7px;color:#91a5b5}
+@media(max-width:800px){
+  nav .links{display:none}.cards,.stat-grid,.split{grid-template-columns:1fr}
+  header{min-height:85vh}.hero p{font-size:1rem}
+  section{padding:60px 6%}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">INDUSTRIA <span>CHILE</span></div>
+  <div class="links">
+    <a href="#sectores">Sectores</a>
+    <a href="#importancia">Importancia</a>
+    <a href="#desafios">Desafíos</a>
+    <a href="#futuro">Futuro</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <div class="badge">Panorama industrial de Chile</div>
+    <h1>Industria que transforma<br>y mueve a Chile</h1>
+    <p>
+      Una mirada general a los principales sectores productivos del país,
+      su aporte al desarrollo económico, la innovación, la infraestructura
+      y los desafíos que marcarán la industria chilena.
+    </p>
+    <a class="btn" href="#sectores">Explorar la industria</a>
+  </div>
+</header>
+
+<section id="sectores">
+  <div class="container">
+    <div class="section-title">
+      <h2>Principales sectores industriales</h2>
+      <p>Chile cuenta con una estructura productiva diversa, donde los recursos naturales conviven con manufactura, energía, tecnología y servicios especializados.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">⛏️</div><h3>Minería</h3>
+        <p>El cobre ocupa un lugar central en la economía chilena. También destacan el litio y otros minerales relevantes para las nuevas tecnologías y la transición energética.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🌲</div><h3>Forestal y celulosa</h3>
+        <p>La actividad forestal y la producción de celulosa y madera forman una cadena industrial relevante, especialmente en la zona centro-sur.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🐟</div><h3>Alimentos y acuicultura</h3>
+        <p>La industria alimentaria, pesquera y acuícola aprovecha la extensa costa y la diversidad agrícola del país para abastecer mercados nacionales e internacionales.</p>
+      </article>
+      <article class="card">
+        <div class="icon">⚡</div><h3>Energía</h3>
+        <p>Chile está desarrollando una matriz energética con creciente participación de fuentes renovables, especialmente solar y eólica.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🏭</div><h3>Manufactura</h3>
+        <p>La manufactura incluye productos químicos, metalmecánica, materiales de construcción, alimentos, bebidas y múltiples industrias proveedoras.</p>
+      </article>
+      <article class="card">
+        <div class="icon">💻</div><h3>Tecnología</h3>
+        <p>La digitalización, automatización, ciberseguridad, inteligencia artificial y servicios tecnológicos están transformando los procesos industriales.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="section-title">
+      <h2 style="color:white">Una industria en evolución</h2>
+      <p style="color:#cbdbe7">La competitividad industrial depende cada vez más de productividad, tecnología, energía y talento.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><strong>01</strong><span>Minería como sector estratégico</span></div>
+      <div class="stat"><strong>02</strong><span>Transición hacia energías renovables</span></div>
+      <div class="stat"><strong>03</strong><span>Mayor digitalización industrial</span></div>
+      <div class="stat"><strong>04</strong><span>Impulso a la innovación</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="importancia">
+  <div class="container split">
+    <div class="visual" aria-label="Infraestructura industrial"></div>
+    <div>
+      <div class="section-title" style="text-align:left;margin-bottom:25px">
+        <h2>¿Por qué es importante la industria?</h2>
+      </div>
+      <ul class="list">
+        <li>Genera empleo directo e indirecto en distintas regiones.</li>
+        <li>Impulsa exportaciones y la generación de divisas.</li>
+        <li>Desarrolla infraestructura y cadenas de proveedores.</li>
+        <li>Promueve innovación, productividad y transferencia tecnológica.</li>
+        <li>Contribuye al crecimiento de comunidades y economías regionales.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="desafios" style="background:#eef4f8">
+  <div class="container">
+    <div class="section-title">
+      <h2>Desafíos de la industria chilena</h2>
+      <p>El desarrollo industrial requiere avanzar en competitividad y sostenibilidad al mismo tiempo.</p>
+    </div>
+    <div class="timeline">
+      <article><b>Competitividad</b><br>Mejorar productividad, infraestructura, logística y eficiencia de los procesos productivos.</article>
+      <article><b>Sostenibilidad</b><br>Reducir emisiones, optimizar el uso del agua y avanzar hacia modelos de producción más circulares.</article>
+      <article><b>Digitalización</b><br>Integrar automatización, datos, inteligencia artificial y ciberseguridad en las operaciones industriales.</article>
+      <article><b>Capital humano</b><br>Fortalecer las capacidades técnicas y profesionales necesarias para las nuevas industrias.</article>
+    </div>
+  </div>
+</section>
+
+<section id="futuro">
+  <div class="container split">
+    <div>
+      <div class="section-title" style="text-align:left;margin-bottom:20px">
+        <h2>El futuro industrial de Chile</h2>
+      </div>
+      <p style="color:var(--muted);margin-bottom:18px">
+        La oportunidad está en avanzar desde la exportación de recursos hacia cadenas de mayor valor,
+        incorporando tecnología, innovación y procesos sostenibles.
+      </p>
+      <p style="color:var(--muted)">
+        Áreas como hidrógeno verde, energías renovables, electromovilidad, minería sostenible,
+        almacenamiento energético y servicios tecnológicos pueden abrir nuevas oportunidades.
+      </p>
+    </div>
+    <div class="visual" style="background-image:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80')"></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Chile: recursos, talento e innovación</h2>
+    <p>El desafío es convertir las capacidades actuales en una industria más productiva, tecnológica y sostenible.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Industria Chile</strong>
+  <small>Contenido informativo general · Sitio web demostrativo</small>
+</footer>
+
+</body>
+</html>
